@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>member List</h2>
+
+<table>
+    <tr>
+        <th>memberId</th>
+        <th>memberPassword</th>
+        <th>memberName</th>
+        <th>memberEmail</th>
+        <th>memberMobile</th>
+        <th>detail</th>
+    </tr>
+    <tr th:each="memberDTOList: ${memberDTOList}">
+        <td th:text="${memberDTOList.memberId}"></td>
+        <td th:text="${memberDTOList.memberPassword}"></td>
+        <td th:text="${memberDTOList.memberName}"></td>
+        <td th:text="${memberDTOList.memberEmail}"></td>
+        <td th:text="${memberDTOList.memberMobile}"></td>
+        <td><a th:href="@{|/member/${memberDTOList.id}|}" th:text="상세보기"></a></td>
+
+    </tr>
+</table>
+
+</body>
+</html>

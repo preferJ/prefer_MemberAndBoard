@@ -1,4 +1,4 @@
-package com.its.board.entity;
+package com.prefer_memberandboard.Entity;
 
 import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
